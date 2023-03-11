@@ -1,4 +1,4 @@
-string bruteforce  
+string shuffle  
 example:  
 input  
 ```
