@@ -11,9 +11,6 @@ func main() {
 	_string := "abcdez"
 	var createTree func(str string, _node *node)
 	createTree = func(str string, _node *node) {
-		if len(str) == 0 {
-			return
-		}
 		for i := 0; i < len(str); i++ {
 			__node := node{
 				ch:       string(str[i]),
