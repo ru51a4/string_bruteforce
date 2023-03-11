@@ -20,7 +20,13 @@ func main() {
 				children: nil,
 			}
 			_node.children = append(_node.children, &__node)
-			createTree(str[1:], &__node)
+			cStr := ""
+			for j, _ch := range str {
+				if j != i {
+					cStr += string(_ch)
+				}
+			}
+			createTree(cStr, &__node)
 		}
 	}
 
@@ -32,7 +38,13 @@ func main() {
 			children: nil,
 		}
 		Tree = append(Tree, &_node)
-		createTree(_string[1:], &_node)
+		cStr := ""
+		for j, _ch := range _string {
+			if j != i {
+				cStr += string(_ch)
+			}
+		}
+		createTree(cStr, &_node)
 	}
 
 	var Res []string
