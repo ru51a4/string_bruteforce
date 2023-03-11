@@ -14,34 +14,25 @@ func main() {
 		if len(str) == 0 {
 			return
 		}
-		q := ""
-		for j := 1; j < len(str); j++ {
-			q += string(str[j])
-		}
-
 		for i := 0; i < len(str); i++ {
 			__node := node{
 				ch:       string(str[i]),
 				children: nil,
 			}
 			_node.children = append(_node.children, &__node)
-			createTree(q, &__node)
+			createTree(str[1:], &__node)
 		}
 	}
 
 	//create Tree
 	var Tree []*node
-	q := ""
-	for j := 1; j < len(_string); j++ {
-		q += string(_string[j])
-	}
 	for i := 0; i < len(_string); i++ {
 		_node := node{
 			ch:       string(_string[i]),
 			children: nil,
 		}
 		Tree = append(Tree, &_node)
-		createTree(q, &_node)
+		createTree(_string[1:], &_node)
 	}
 
 	var Res []string
